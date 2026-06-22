@@ -1,3 +1,12 @@
 # DCGS
 
 # Dual-Subspace Motion Modeling for Robust Dynamic Gaussian Splatting
+
+Reconstructing dynamic scenes from monocular videos remains a challenging problem due to motion modeling methods generally suffering from temporal instability, boundary artifacts, or geometric collapse. 
+% Recent advances in dynamic neural and Gaussian-based representations have improved rendering quality, yet robust motion modeling in monocular dynamic scenes remains elusive, often suffering from temporal instability, boundary artifacts, or geometric collapse.
+% We identify that a key limitation of existing approaches lies in a monolithic modeling assumption that forces all motion into a single deformation function, leading to an inherent stability--plasticity dilemma. 
+To address this issue, we propose a principled motion decomposition framework for monocular dynamic scene reconstruction based on dynamic Gaussian splatting. Our method explicitly separates motion into two complementary components: a Chebyshev field that models globally stable, low-frequency motion trends, and a Residual Motion field that captures localized, high-frequency dynamics outside the spectral subspace.
+%
+The novel Chebyshev field module leverages spectral representations on bounded, non-periodic temporal intervals to ensure temporal coherence and suppress boundary oscillations, while the residual motion field focuses on structured local dynamics without interfering with global stability. We further design a joint optimization objective that enforces appearance consistency, geometric plausibility, and residual regularization, ensuring stable and physically meaningful reconstruction.
+%
+Extensive experiments on challenging monocular dynamic scenes demonstrate that the proposed framework significantly improves temporal stability, reconstruction fidelity, and motion boundary sharpness compared to existing dynamic Gaussian and neural deformation methods. 
